@@ -1,4 +1,5 @@
 # Array Cardio
+In this Project, I am practising some array methods. 
 
 ## Built With
 
