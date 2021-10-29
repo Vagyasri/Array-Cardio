@@ -91,12 +91,12 @@ console.table(oldest);
 
 // 7. sort Exercise
 // Sort the people alphabetically by last name
-// const alpha = people.sort((lastOne, nextOne) => {
-//   const [aLast] = lastOne.split(', ');
-//   const [bLast] = nextOne.split(', ');
-//   return aLast > bLast ? 1 : -1;
-// });
-// console.table(alpha);
+const alpha = people.sort((lastOne, nextOne) => {
+  const [aLast] = lastOne.split(', ');
+  const [bLast] = nextOne.split(', ');
+  return aLast > bLast ? 1 : -1;
+});
+console.table(alpha);
 
 // 8. Reduce Exercise
 // Sum up the instances of each of these
