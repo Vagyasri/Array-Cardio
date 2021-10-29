@@ -9,10 +9,6 @@ In this Project, I am dealing with some array methods in order to get a strong g
 - Webpack
 - ES6
 
-## Screenshot
-
-![Array Cardio](array.png) 
-
 ## Live Demo
 
 [Live View!!](https://vagyasri.github.io/Array-Cardio/dist/)
