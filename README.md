@@ -1,5 +1,5 @@
 # Array Cardio
-In this Project, I am practising some array methods. 
+In this Project, I am dealing with some array methods in order to get a strong grasp on Javascript fundamentals.
 
 ## Built With
 
