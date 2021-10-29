@@ -1,5 +1,4 @@
 # Array Cardio
-In this Project, I am dealing with some array methods in order to get a strong grasp on Javascript fundamentals.
 
 ## Built With
 
@@ -8,6 +7,10 @@ In this Project, I am dealing with some array methods in order to get a strong g
 - JavaScipt
 - Webpack
 - ES6
+
+## Screenshot
+
+![Array Cardio](array.png) 
 
 ## Live Demo
 
