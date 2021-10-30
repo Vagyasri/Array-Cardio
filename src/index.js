@@ -45,7 +45,7 @@ const inventors = [
   },
 ];
 
-const people = [
+const peopleList = [
   'Bernhard, Sandra', 'Bethea, Erin', 'Becker, Carl', 'Bentsen, Lloyd', 'Beckett, Samuel', 'Blake, William', 'Berger, Ric', 'Beddoes, Mick', 'Beethoven, Ludwig',
   'Belloc, Hilaire', 'Begin, Menachem', 'Bellow, Saul', 'Benchley, Robert', 'Blair, Robert', 'Benenson, Peter', 'Benjamin, Walter', 'Berlin, Irving',
   'Benn, Tony', 'Benson, Leana', 'Bent, Silas', 'Berle, Milton', 'Berry, Halle', 'Biko, Steve', 'Beck, Glenn', 'Bergman, Ingmar', 'Black, Elk', 'Berio, Luciano',
@@ -101,8 +101,8 @@ console.table(oldest);
 // console.table(de);
 
 // 7. sort Exercise
-// Sort the people alphabetically by last name
-const alpha = people.sort((lastOne, nextOne) => {
+// Sort the peopleList alphabetically by last name
+const alpha = peopleList.sort((lastOne, nextOne) => {
   const [aLast] = lastOne.split(', ');
   const [bLast] = nextOne.split(', ');
   // const bLast = nextOne.split(', '); // same result
@@ -123,3 +123,60 @@ const instances = data.reduce((obj, item) => {
 },
 {});
 console.table(instances);
+
+// ## Array Cardio Day 2
+
+const people = [
+  { name: 'Wes', year: 1988 },
+  { name: 'Kait', year: 1986 },
+  { name: 'Irv', year: 1970 },
+  { name: 'Lux', year: 2015 },
+];
+
+const comments = [
+  { text: 'Love this!', id: 523423 },
+  { text: 'Super good', id: 823423 },
+  { text: 'You are the best', id: 2039842 },
+  { text: 'Ramen is my fav food ever', id: 123523 },
+  { text: 'Nice Nice Nice!', id: 542328 },
+];
+
+// Some and Every Checks
+// Array.prototype.some() // is at least one person 19 or older?
+// const is19 = people.some((person) => (new Date()).getFullYear() - person.year >= 19);
+const is19 = people.some((person) => (2021 - person.year) >= 19);
+console.log(is19);
+
+// Array.prototype.every() // is everyone 19 or older?
+const all19 = people.every((person) => (new Date()).getFullYear() - person.year >= 19);
+console.log(all19);
+
+// Array.prototype.find()
+// Find is like filter, but instead returns just the one you are looking for
+// find the comment with the ID of 823423
+const commentWithId = comments.find((comment) => comment.id === 823423);
+console.log(commentWithId);
+
+// Array.prototype.findIndex()
+// Find the comment with this ID
+const index = comments.findIndex((comment) => comment.id === 2039842);
+const indexOfText = comments.findIndex((comment) => comment.text === 'Nice Nice Nice!');
+const includeText = comments.findIndex((comment) => comment.text.includes('Nice'));
+
+console.log(index, indexOfText, includeText);
+
+// delete the comment with the ID of 823423
+// const newComments = comments.filter((comment) => comment.id !== 823423);
+// console.log(newComments);
+
+const deletedComment = comments.splice(index, 1);
+console.log(deletedComment);
+console.table(comments); // All comments except deleted comment
+
+// Incase we want to keep our comments array and reflect the reult in a new array; use slice()
+
+const newComments = [ // spread operator
+  ...comments.slice(0, index), // before index // 0 to index - 1
+  ...comments.slice(index + 1), // after index // index + 1 to end
+]; // slice(start, end) // start is inclusive, end is exclusive
+console.table(newComments); // being operated on the new index after the deleted comment
