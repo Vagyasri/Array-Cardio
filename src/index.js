@@ -68,6 +68,7 @@ console.table(names);
 // Array.prototype.sort()
 // 3. Sort the inventors by birthdate, oldest to youngest
 
+// const ord = inventors.sort((inventor1, inventor2) => (inventor1.year > inventor2.year ? 1 : -1));
 const birthdate = inventors.sort((a, b) => a.year - b.year);
 console.table(birthdate);
 
@@ -88,6 +89,14 @@ console.table(oldest);
 // const boulevards = document.querySelectorAll('.mw-category-group > ul > li > a');
 // const de = Array.from(boulevards).filter((boulevard) => boulevard.textContent.includes('de'));
 // console.table(de);
+
+const boulevards = document.querySelector('.mw-category');
+// const links = [...boulevards.querySelectorAll('a')]; // Spread operator
+const links = Array.from(boulevards.querySelectorAll('a'));
+
+const de = links.map((link) => link.textContent);
+
+console.table(de);
 
 // 7. sort Exercise
 // Sort the people alphabetically by last name
