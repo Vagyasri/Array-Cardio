@@ -45,7 +45,7 @@ const inventors = [
   },
 ];
 
-const people = [
+const peopleList = [
   'Bernhard, Sandra', 'Bethea, Erin', 'Becker, Carl', 'Bentsen, Lloyd', 'Beckett, Samuel', 'Blake, William', 'Berger, Ric', 'Beddoes, Mick', 'Beethoven, Ludwig',
   'Belloc, Hilaire', 'Begin, Menachem', 'Bellow, Saul', 'Benchley, Robert', 'Blair, Robert', 'Benenson, Peter', 'Benjamin, Walter', 'Berlin, Irving',
   'Benn, Tony', 'Benson, Leana', 'Bent, Silas', 'Berle, Milton', 'Berry, Halle', 'Biko, Steve', 'Beck, Glenn', 'Bergman, Ingmar', 'Black, Elk', 'Berio, Luciano',
@@ -101,8 +101,8 @@ console.table(oldest);
 // console.table(de);
 
 // 7. sort Exercise
-// Sort the people alphabetically by last name
-const alpha = people.sort((lastOne, nextOne) => {
+// Sort the peopleList alphabetically by last name
+const alpha = peopleList.sort((lastOne, nextOne) => {
   const [aLast] = lastOne.split(', ');
   const [bLast] = nextOne.split(', ');
   // const bLast = nextOne.split(', '); // same result
