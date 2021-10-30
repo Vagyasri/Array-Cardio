@@ -154,8 +154,8 @@ console.log(all19);
 // Array.prototype.find()
 // Find is like filter, but instead returns just the one you are looking for
 // find the comment with the ID of 823423
-const comment = comments.find((comment) => comment.id === 823423);
-console.log(comment);
+const commentWithId = comments.find((comment) => comment.id === 823423);
+console.log(commentWithId);
 
 // Array.prototype.findIndex()
 // Find the comment with this ID
@@ -166,5 +166,9 @@ const includeText = comments.findIndex((comment) => comment.text.includes('Nice'
 console.log(index, indexOfText, includeText);
 
 // delete the comment with the ID of 823423
-const newComments = comments.filter((comment) => comment.id !== 823423);
-console.log(newComments);
+// const newComments = comments.filter((comment) => comment.id !== 823423);
+// console.log(newComments);
+
+const deletedComment = comments.splice(index, 1);
+console.log(deletedComment);
+console.table(comments); // All comments except deleted comment
