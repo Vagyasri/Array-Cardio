@@ -175,8 +175,8 @@ console.table(comments); // All comments except deleted comment
 
 // Incase we want to keep our comments array and reflect the reult in a new array; use slice()
 
-const newComments = [
-  ...comments.slice(0, index),
-  ...comments.slice(index + 1),
-];
+const newComments = [ // spread operator
+  ...comments.slice(0, index), // before index // 0 to index - 1
+  ...comments.slice(index + 1), // after index // index + 1 to end
+]; // slice(start, end) // start is inclusive, end is exclusive
 console.table(newComments); // being operated on the new index after the deleted comment
