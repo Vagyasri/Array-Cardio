@@ -172,3 +172,11 @@ console.log(index, indexOfText, includeText);
 const deletedComment = comments.splice(index, 1);
 console.log(deletedComment);
 console.table(comments); // All comments except deleted comment
+
+// Incase we want to keep our comments array and reflect the reult in a new array; use slice()
+
+const newComments = [
+  ...comments.slice(0, index),
+  ...comments.slice(index + 1),
+];
+console.table(newComments); // being operated on the new index after the deleted comment
