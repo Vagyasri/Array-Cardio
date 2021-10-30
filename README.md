@@ -8,10 +8,6 @@
 - Webpack
 - ES6
 
-## Screenshot
-
-![Array Cardio](array.png) 
-
 ## Live Demo
 
 [Live View!!](https://vagyasri.github.io/Array-Cardio/dist/)
