@@ -94,7 +94,9 @@ const boulevards = document.querySelector('.mw-category');
 // const links = [...boulevards.querySelectorAll('a')]; // Spread operator
 const links = Array.from(boulevards.querySelectorAll('a'));
 
-const de = links.map((link) => link.textContent);
+const de = links
+  .map((link) => link.textContent)
+  .filter((name) => name.includes('de'));
 
 console.table(de);
 
