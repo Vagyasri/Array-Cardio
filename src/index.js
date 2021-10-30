@@ -147,6 +147,8 @@ const is19 = people.some((person) => (2021 - person.year) >= 19);
 console.log(is19);
 
 // Array.prototype.every() // is everyone 19 or older?
+const all19 = people.every((person) => (2021 - person.year) >= 19);
+console.log(all19);
 
 // Array.prototype.find()
 // Find is like filter, but instead returns just the one you are looking for
