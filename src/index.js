@@ -166,3 +166,5 @@ const includeText = comments.findIndex((comment) => comment.text.includes('Nice'
 console.log(index, indexOfText, includeText);
 
 // delete the comment with the ID of 823423
+const newComments = comments.filter((comment) => comment.id !== 823423);
+console.log(newComments);
