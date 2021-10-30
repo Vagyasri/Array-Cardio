@@ -90,21 +90,22 @@ console.table(oldest);
 // const de = Array.from(boulevards).filter((boulevard) => boulevard.textContent.includes('de'));
 // console.table(de);
 
-const boulevards = document.querySelector('.mw-category');
-// const links = [...boulevards.querySelectorAll('a')]; // Spread operator
-const links = Array.from(boulevards.querySelectorAll('a'));
+// const boulevards = document.querySelector('.mw-category');
+// const links = Array.from(boulevards.querySelectorAll('a'));
+// or const links = [...boulevards.querySelectorAll('a')]; // Spread operator
 
-const de = links
-  .map((link) => link.textContent)
-  .filter((name) => name.includes('de'));
+// const de = links
+//   .map((link) => link.textContent)
+//   .filter((name) => name.includes('de'));
 
-console.table(de);
+// console.table(de);
 
 // 7. sort Exercise
 // Sort the people alphabetically by last name
 const alpha = people.sort((lastOne, nextOne) => {
   const [aLast] = lastOne.split(', ');
   const [bLast] = nextOne.split(', ');
+  // const bLast = nextOne.split(', '); // same result
   return aLast > bLast ? 1 : -1;
 });
 console.table(alpha);
