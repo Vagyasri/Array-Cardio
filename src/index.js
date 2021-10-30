@@ -159,7 +159,10 @@ console.log(comment);
 
 // Array.prototype.findIndex()
 // Find the comment with this ID
-const index = comments.findIndex((comment) => comment.id === 823423);
-console.log(index);
+const index = comments.findIndex((comment) => comment.id === 2039842);
+const indexOfText = comments.findIndex((comment) => comment.text === 'Nice Nice Nice!');
+const includeText = comments.findIndex((comment) => comment.text.includes('Nice'));
+
+console.log(index, indexOfText, includeText);
 
 // delete the comment with the ID of 823423
